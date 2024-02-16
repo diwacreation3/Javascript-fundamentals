@@ -9,3 +9,8 @@ Javascript is easy to learn.
 - Javascript Syntax
 - Javascript Variable (var, let const)
 - Javascript Identifiers, assignment operator
+
+## [ 🍋 02 Javascript Basics](./02_Javascript_Basics/readme.md)
+
+- Javascript Datatype
+- String, Number, bigint, boolean, Undefined, Null, symbol object  ( Overview )
