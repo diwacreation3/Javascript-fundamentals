@@ -28,3 +28,23 @@ function name(parameter1, parameter2, parameter3) {
 ## Function Invocation
 The code inside the function will execute when "something"  invokes (calls) the function:
 
+- when an event occurs (when a user clicks a button)
+- When it is invoked (called) from javascript code
+- Automatically (self invoked)
+
+## Function Return
+When javascript reached a return statement, the function will stop executing.
+
+If the function was invoked from a statement, javascript will "return" to execute the code after the invoking statements. Function often compute a return value. te return value is returned back to the caller; 
+
+```js
+// Function is called, the return value will endup in x 
+let x = multiply(4,3);
+
+function multiply(a,b) {
+    // Function returns the product of a and b
+    return a * b;
+}
+```
+
+
