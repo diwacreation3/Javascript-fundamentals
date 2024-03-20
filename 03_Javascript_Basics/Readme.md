@@ -47,4 +47,30 @@ function multiply(a,b) {
 }
 ```
 
+## The () Operator
+The () operator invokes (calls) the function 
 
+Convert Fahrenheit to Celsius
+
+```js
+function toCelsius(fahrenheit){
+    return (5/9) * (fahrenheit - 32);
+}
+let value = toCelsius(77);
+```
+## Local Variables
+Variables declared within a javascript function become LOCAL to the function.
+
+Local variables can only be accessed from within the function.
+
+Example
+```js
+// code here can NOT use carName
+
+function myFunction() {
+  let carName = "Volvo";
+  // code here CAN use carName
+}
+
+// code here can NOT use carName
+```
