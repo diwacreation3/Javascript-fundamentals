@@ -14,3 +14,18 @@ Javascript is easy to learn.
 
 - Javascript Datatype
 - String, Number, bigint, boolean, Undefined, Null, symbol object  ( Overview )
+
+## [ 🍋 03 Javascript Basics](./03_Javascript_Basics/Readme.md)
+
+- Function, ()Operator
+
+## [ 🍋 04 Javascript Basics ](./04_Javascript_Basics/readme.md)
+
+- Javascript Objects 
+- Javascript Events
+
+## [ 🍋 05 Javascript Basics ](./05_Javascript_Basics/readme.md)
+
+- Array
+- if, else, else if
+- dates, random 
