@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>See console</h1>
+
+    <script>
+        const snack = {
+            snackName: "MOMO",
+            type: "Chicken",
+            price: 120,
+            souce: {
+                light: "Tomato",
+                medium: "green chilli",
+                strong: "Red chilli"
+            }
+        }
+        console.log(snack.snackName + " " + "type "+ snack.type+ " "+ "price" + " "+ snack.price);
+        console.log("Nested Object "+ snack.souce.light + " " + snack.souce.medium + " " + snack.souce.strong);
+    </script>
+</body>
+
+</html>

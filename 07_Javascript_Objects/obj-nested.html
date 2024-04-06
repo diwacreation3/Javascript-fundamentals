@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Nested javascript Objects and arrays </h2>
+    <div id="data"></div>
+
+    <script>
+        let value = "";
+        const hotel = {
+            name: "Mr. MOMO",
+            location: "nagarpalika road",
+            menu: [
+                { name: "Momo", flavor: ["Chicken", "Veg", "Buff"] },
+                { name: "Chowmin", flavor: ["veg", "chicken", "Buff"] },
+                { name: "chatpatey", flavor: ["Normal", "Spicy", "soucy"] }
+            ]
+        }
+
+        //accessing nested object 
+        value+= "<h2>" + hotel.name + "</h2>" + "<h2>" + hotel.location + "</h2>";
+        for(let i in hotel.menu)
+        {
+            value += "<h2>" + hotel.menu[i].name + "</h2>";
+            for(let j in hotel.menu[i].flavor)
+            {
+                value += hotel.menu[i].flavor[j] + "<br>";
+            }
+        }
+
+        document.getElementById("data").innerHTML = value;
+    </script>
+</body>
+
+</html>
