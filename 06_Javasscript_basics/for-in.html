@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>javascript For in Loop</h1>
+    <div id="result"></div>
+
+    <script>
+        const person = {fname: "Diwakar", lname:"Phuyal", age: 19};
+
+        let txt = "";
+        for(let x in person){
+            txt += person[x] + " ";
+        }
+
+        document.getElementById("result").innerHTML = txt;
+    </script>
+</body>
+</html>
