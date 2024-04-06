@@ -97,3 +97,29 @@ const hotel = {
     ]
 }
 ```
+
+# JavaScript Object methods 
+
+```js
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  id: 3696,
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+```
+## What is `this` ?
+In JavaScript, the this keyword refers to an object.
+
+Which object depends on how this is being invoked (used or called).
+
+- In an object method, `this` refers to the object.
+- Alone, `this` refers to the global object.
+- In a function, `this` refer to the global object.
+- In a function, in strict mode, `this` is `undefined`.
+- In an event, `this` refers to the element that received the event.
+
+
+
