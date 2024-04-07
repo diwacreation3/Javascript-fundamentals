@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="res"></div>
+    <script>
+        const snack = {
+            snackName: function () {
+                return this.type + " " + this.name;
+            }
+        }
+
+        const snack0 = {
+            type: "Chicken",
+            name: "MOMO"
+        }
+
+        const snack1 = {
+            type: "Buff",
+            name: "MOMO"
+        }
+        document.getElementById("res").innerHTML= snack.snackName.call(snack0);
+        console.log(snack.snackName.call(snack0));
+    </script>
+</body>
+
+</html>
