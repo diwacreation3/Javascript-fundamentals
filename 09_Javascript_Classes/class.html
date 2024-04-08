@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Javascript Classes </h2>
+    <div id="res"></div>
+
+    <div id="res1"></div>
+
+    <script>
+        class Snack{
+            constructor(name, price)
+            {
+                this.name = name;
+                this.price = price;
+            }
+        }
+
+        const snack0 = new Snack("MOMO", 120);
+        const snack1 = new Snack("Chatpatey", 50);
+
+        document.getElementById("res").innerHTML = "Snacks are: " + snack0.name + " "+  snack1.name; 
+
+        // class method 
+        class car {
+            constructor(name, year)
+            {
+                this.name = name;
+                this.year = year;
+            }
+            age(v){
+                return v - this.year;
+            }
+        }
+
+        const date = new Date();
+        let year = date.getFullYear();
+
+        const myCar = new car("tesla", 2018);
+        document.getElementById("res1").innerHTML = "Car is " + myCar.age(year) + " years old.";
+
+    </script>
+</body>
+</html>
