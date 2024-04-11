@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #res{
+            font-size: 20px;
+            letter-spacing: .2em;
+            font-weight: 900;
+            color: rgb(2, 0, 66);
+        }
+    </style>
+    <h3>using setInterval() to display the time every second </h3>
+    <div id="res"></div>
+
+    <script>
+        setInterval(displayDate, 1000);
+
+        function displayDate()
+        {
+            let d = new Date();
+            document.getElementById("res").innerHTML =
+            d.getHours() + ":" +
+            d.getMinutes() + ":" +
+            d.getSeconds();
+        }
+    </script>
+</body>
+</html>
