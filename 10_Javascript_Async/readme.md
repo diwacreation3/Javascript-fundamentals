@@ -127,3 +127,87 @@ When using the Javascript function `setInterval()`, you can specify a callback f
 </body>
 </html>
 ```
+
+# Javascript Promise 
+"Producing code" is code that can take some time
+"Consuming code" is code that must wait for the result
+A Promise is an Object that links Producing code and Consuming code
+
+## Javascript promise Object
+A Promise contains both the producing code and calls to the consuming code:
+
+Promise Syntax
+
+```js
+let myPromise = new promise(function(resolve, reject){
+    // producing code (may take some time)
+    resolve(); //when sucessful
+    reject(); // when error
+});
+
+// Consuming code (must wait for a fulfilled promise )
+myPromise.then(
+    function(value) {
+        /// code if sucessful
+    },
+    function(error) {
+        // code if some error
+    }
+);
+```
+When the producing code obtains the result, it should call one of the two callbacks:
+
+| When | Call|
+|------|------|
+|Sucess | resolve(result value) |
+| Error | reject(error object) |
+
+## promise Object properties 
+A javascript Promise object can be:
+- Pending
+- Fulfilled
+- rejected 
+
+The Promise object supports two properties: `state` and `result`.
+
+| myPromise.state | myPromise.result |
+| ----------------|------------------|
+| "pending"   | undefined |
+| "fulfilled" | a result value |
+| "rejected" | an error object |
+
+## Promise How to 
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="res"></div>
+
+    <script>
+        function display(info){
+            document.getElementById("res").innerHTML = info;
+        }
+        let myPromise = new Promise(function(resolve, reject){
+            let value = 0;
+
+            if(value == 0){
+                resolve("Sucess");
+            } else {
+                reject("Error");
+            }
+        });
+
+        myPromise.then(
+            function(value) {display(value);},
+            function(error) {display(error);}
+        );
+    </script>
+</body>
+</html>
+```
