@@ -246,3 +246,58 @@ The Promise object supports two properties: `state` and `result`.
 </body>
 </html>
 ```
+# Javascript Async
+"async and await make promises easier to write"
+async makes a function return a Promise
+await makes a function wait for a Promise
+
+## Async Syntax
+The keyword `async` before a function makes the function return a promise:
+
+```js
+async function display(){
+    return "Hello";
+}
+```
+
+Example
+
+```html
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript async / await</h1>
+<p id="demo"></p>
+
+<script>
+function myDisplayer(some) {
+  document.getElementById("demo").innerHTML = some;
+}
+
+async function myFunction() {return "Hello";}
+
+myFunction().then(
+  function(value) {myDisplayer(value);},
+  function(error) {myDisplayer(error);}
+);</script>
+
+</body>
+</html>
+```
+
+## Await Syntax
+
+The `await` keyword can only be used inside an `async` function.
+
+The `await` keyword makes the function pause the execution and wait for a resolved promise before it continues
+
+```js
+async function myDisplay() {
+  let myPromise = new Promise(function(resolve, reject) {
+    resolve("I love You !!");
+  });
+  document.getElementById("demo").innerHTML = await myPromise;
+}
+
+myDisplay();
+```
