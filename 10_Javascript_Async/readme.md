@@ -211,3 +211,38 @@ The Promise object supports two properties: `state` and `result`.
 </body>
 </html>
 ```
+## Javascript Promise Example
+- Waiting for a file 
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="res"></div>
+
+    <script>
+        function display(Somedata){
+            document.getElementById("res").innerHTML = Somedata;
+        }
+        function getFile(callBack){
+            let req = new XMLHttpRequest();
+            req.onload = function(){
+                if(req.status == 200){
+                    callBack(this.responseText);
+                } else {
+                    callBack("Error: " + req.status);
+                }
+            }
+            req.open('GET', "interval.html");
+            req.send();
+        }
+        getFile(display);
+    </script>
+</body>
+</html>
+```
