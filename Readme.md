@@ -28,4 +28,18 @@ Javascript is easy to learn.
 
 - Array
 - if, else, else if
-- dates, random 
+- dates, random
+
+## 😔🤐 I lost Motivation 
+```cpp
+if(love->life && programming->life == TRUE)
+{
+string motivation = "hope, depression, time fly as falcon9,
+you can't focus yourself,
+so try to stay away from that if you have bigger dreams";
+return false;
+} else{
+cout << "Vibe alone, work on the dream, don't give shit << endl;
+}
+```
+  
